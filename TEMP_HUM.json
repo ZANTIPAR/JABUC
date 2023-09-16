@@ -1,0 +1,140 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "TEMPERATURA",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "",
+						"value": [
+							"datasources[\"uceva00\"][\"temperatura\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "TEMPERATURA",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 1,
+				"4": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "",
+						"value": "datasources[\"uceva00\"][\"temperatura\"]",
+						"units": "°C",
+						"min_value": "18",
+						"max_value": "40"
+					}
+				}
+			]
+		},
+		{
+			"title": "HUMEDAD",
+			"width": 1,
+			"row": {
+				"3": 7,
+				"4": 7
+			},
+			"col": {
+				"3": 3,
+				"4": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "",
+						"value": "datasources[\"uceva00\"][\"humedad\"]",
+						"units": "%H",
+						"min_value": "30",
+						"max_value": 100
+					}
+				}
+			]
+		},
+		{
+			"title": "HUMEDAD",
+			"width": 1,
+			"row": {
+				"3": 9,
+				"4": 9
+			},
+			"col": {
+				"3": 1,
+				"4": 1
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "",
+						"value": [
+							"datasources[\"uceva00\"][\"humedad\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "TEMP & HUM",
+			"width": 1,
+			"row": {
+				"3": 15,
+				"5": 15
+			},
+			"col": {
+				"3": 1,
+				"5": 1
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "",
+						"value": [
+							"datasources[\"uceva00\"][\"humedad\"]",
+							"datasources[\"uceva00\"][\"temperatura\"]"
+						],
+						"include_legend": true,
+						"legend": "HUMEDAD, TEMPERATURA"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "uceva00",
+			"type": "dweet_io",
+			"settings": {
+				"thing_id": "uceva00"
+			}
+		}
+	],
+	"columns": 3
+}
